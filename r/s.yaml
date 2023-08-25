@@ -1,3 +1,3 @@
 payload:
-  - DOMAIN,amzayo.com
-  - DOMAIN,amzayo.top
+  - DOMAIN-SUFFIX,amzayo.com
+  - DOMAIN-SUFFIX,amzayo.top
