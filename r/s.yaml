@@ -1,3 +1,8 @@
-payload:
-  - DOMAIN-SUFFIX,amzayo.com
-  - DOMAIN-SUFFIX,amzayo.top
+# NAME: web
+# AUTHOR: amzayo
+# DOMAIN-KEYWORD: 1
+# DOMAIN-SUFFIX: 2
+# TOTAL: 3
+DOMAIN-SUFFIX,amzayo.com
+DOMAIN-SUFFIX,amzayo.top
+DOMAIN-KEYWORD,amzayo
