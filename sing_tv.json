@@ -8,8 +8,8 @@
             {
                 "tag": "proxyDns",
                 "address": "https://dns.google/dns-query",
-                "address_resolver":"localDns",
-                "address_strategy":"ipv4_only",        
+                "address_resolver": "localDns",
+                "address_strategy": "ipv4_only",
                 "detour": "🚀 节点选择"
             },
             {
@@ -165,7 +165,6 @@
                 "🚀 节点选择",
                 "♻️ 自动选择",
                 "direct"
-                
             ]
         },
         {
@@ -229,26 +228,24 @@
                 ],
                 "outbound": "netflix"
             },
-
-{
+            {
                 "rule_set": [
                     "bahamut"
                 ],
                 "outbound": "bahamut"
             },
-{
+            {
                 "rule_set": [
                     "disney"
                 ],
                 "outbound": "disney"
             },
-{
+            {
                 "rule_set": [
                     "primevideo"
                 ],
                 "outbound": "primevideo"
             },
-
             {
                 "rule_set": [
                     "bilibili"
@@ -291,7 +288,7 @@
                 "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/google.srs",
                 "download_detour": "direct"
             },
-{
+            {
                 "tag": "netflix",
                 "type": "remote",
                 "format": "binary",
