@@ -132,6 +132,7 @@
         {
             "tag": "bahamut",
             "type": "selector",
+            "interrupt_exist_connections": true,
             "outbounds": [
                 [
                     "🚀 节点选择",
