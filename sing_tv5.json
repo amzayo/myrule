@@ -10,7 +10,9 @@
                 "address": "https://dns.google/dns-query",
                 "address_resolver": "localDns",
                 "address_strategy": "ipv4_only",
-                "detour": "🚀 节点选择"
+                "strategy": "ipv4_only",
+                "detour": "🚀 节点选择",
+                "client_subnet": "1.0.1.0"
             },
             {
                 "tag": "localDns",
@@ -45,7 +47,7 @@
                 "server": "proxyDns"
             }
         ],
-        "final": "localDns",
+        "final": "proxyDns",
         "strategy": "ipv4_only"
     },
     "inbounds": [
@@ -132,13 +134,9 @@
         {
             "tag": "bahamut",
             "type": "selector",
-            "interrupt_exist_connections": true,
             "outbounds": [
-                [
-                    "🚀 节点选择",
-                    "♻️ 自动选择",
-                    "<all-proxy-tags>"
-                ]
+                "🚀 节点选择",
+                "♻️ 自动选择"
             ]
         },
         {
