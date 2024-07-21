@@ -114,6 +114,42 @@
             ]
         },
         {
+            "tag": "netflix",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 节点选择",
+                "♻️ 自动选择"
+            ]
+        },
+        {
+            "tag": "disney",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 节点选择",
+                "♻️ 自动选择"
+            ]
+        },
+        {
+            "tag": "bahamut",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 节点选择",
+                "♻️ 自动选择"
+            ]
+        },
+        {
+            "tag": "primevideo",
+            "type": "selector",
+            "outbounds": [
+                "direct",
+                "🚀 节点选择",
+                "♻️ 自动选择"
+            ]
+        },
+        {
             "tag": "📺 守候影院",
             "type": "selector",
             "outbounds": [
