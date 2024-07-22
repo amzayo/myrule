@@ -11,7 +11,7 @@
                 "address_resolver": "localDns",
                 "address_strategy": "ipv4_only",
                 "strategy": "ipv4_only",
-                "detour": "🚀 节点选择",
+                "detour": "节点选择",
                 "client_subnet": "1.0.1.0"
             },
             {
@@ -52,28 +52,18 @@
     },
     "inbounds": [
         {
-            "type": "tun",
-            "inet4_address": "172.19.0.1/30",
-            "mtu": 9000,
-            "auto_route": true,
-            "strict_route": true,
-            "sniff": true,
-            "endpoint_independent_nat": false,
-            "stack": "system",
-            "platform": {
-                "http_proxy": {
-                    "enabled": true,
-                    "server": "127.0.0.1",
-                    "server_port": 2080
-                }
-            }
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "0.0.0.0",
+            "listen_port": 2080
         },
         {
-            "type": "mixed",
-            "listen": "127.0.0.1",
-            "listen_port": 2080,
-            "sniff": true,
-            "users": []
+            "type": "tun",
+            "inet4_address": "172.19.0.1/30",
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "mixed",
+            "sniff": true
         }
     ],
     "outbounds": [
@@ -91,16 +81,15 @@
         },
         {
             "type": "selector",
-            "tag": "🚀 节点选择",
+            "tag": "节点选择",
             "outbounds": [
-                "♻️ 自动选择",
-                "direct",
-                "{all}"
+                "自动选择",
+                "direct"
             ]
         },
         {
             "type": "urltest",
-            "tag": "♻️ 自动选择",
+            "tag": "自动选择",
             "outbounds": [
                 "direct"
             ],
@@ -109,11 +98,11 @@
         },
         {
             "type": "selector",
-            "tag": "📺BiliBili",
+            "tag": "BiliBili",
             "outbounds": [
                 "direct",
-                "🚀 节点选择",
-                "♻️ 自动选择",
+                "节点选择",
+                "自动选择",
                 "{all}"
             ]
         },
@@ -121,8 +110,8 @@
             "tag": "netflix",
             "type": "selector",
             "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
+                "节点选择",
+                "自动选择",
                 "{all}"
             ]
         },
@@ -130,8 +119,8 @@
             "tag": "disney",
             "type": "selector",
             "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
+                "节点选择",
+                "自动选择",
                 "{all}"
             ]
         },
@@ -139,8 +128,8 @@
             "tag": "bahamut",
             "type": "selector",
             "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
+                "节点选择",
+                "自动选择",
                 "{all}"
             ]
         },
@@ -148,8 +137,8 @@
             "tag": "primevideo",
             "type": "selector",
             "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
+                "节点选择",
+                "自动选择",
                 "{all}"
             ]
         },
@@ -157,27 +146,27 @@
             "tag": "📺 守候影院",
             "type": "selector",
             "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
+                "节点选择",
+                "自动选择",
                 "{all}"
             ]
         },
         {
             "type": "selector",
-            "tag": "🎯 全球直连",
+            "tag": "全球直连",
             "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
                 "direct",
+                "节点选择",
+                "自动选择",
                 "{all}"
             ]
         },
         {
             "type": "selector",
-            "tag": "🐟 漏网之鱼",
+            "tag": "漏网之鱼",
             "outbounds": [
-                "🚀 节点选择",
-                "♻️ 自动选择",
+                "节点选择",
+                "自动选择",
                 "direct",
                 "{all}"
             ]
@@ -186,13 +175,14 @@
             "type": "selector",
             "tag": "Global",
             "outbounds": [
-                "direct"
+                "direct",
+                "{all}"
             ]
         }
     ],
     "route": {
         "auto_detect_interface": true,
-        "final": "🚀 节点选择",
+        "final": "节点选择",
         "rules": [
             {
                 "type": "logical",
@@ -256,7 +246,7 @@
                 "rule_set": [
                     "bilibili"
                 ],
-                "outbound": "📺BiliBili"
+                "outbound": "BiliBili"
             },
             {
                 "domain_suffix": [
@@ -265,11 +255,11 @@
                     "src-emby.cn2gias.uk",
                     "post.cn2gias.uk"
                 ],
-                "outbound": "📺 守候影院"
+                "outbound": "守候影院"
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
-                "outbound": "🚀 节点选择"
+                "outbound": "节点选择"
             },
             {
                 "rule_set": [
